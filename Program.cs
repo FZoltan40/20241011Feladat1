@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,10 +19,32 @@ namespace Feladat1
                 lista.Add(rnd.Next(1,101));
 
             }
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                Console.Write(lista[i]+",");
+            }
+        }
+
+        public static int minimum()
+        {
+            int min = lista[0];
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i] < min)
+                {
+                    min = lista[i];
+                }
+            }
+
+            return min;
         }
         static void Main(string[] args)
         {
             feltolt();
+            Console.WriteLine();
+            Console.WriteLine(minimum());
         }
     }
 }
