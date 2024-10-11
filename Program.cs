@@ -40,11 +40,28 @@ namespace Feladat1
 
             return min;
         }
+
+        public static int maximum()
+        {
+            int max = lista[0];
+
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (lista[i] > max)
+                {
+                    max = lista[i];
+                }
+            }
+
+            return max;
+        }
         static void Main(string[] args)
         {
             feltolt();
             Console.WriteLine();
             Console.WriteLine(minimum());
+            Console.WriteLine();
+            Console.WriteLine(maximum());
         }
     }
 }
